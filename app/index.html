@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Title Page</title>
+    <meta charset="UTF-8">
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      .roomContainer {
+        display: none;
+      }
+      .room {
+        cursor: pointer;
+      }
+      .list-group-item.active {
+        background-color: #dddddd;
+      }
+      .panel-box .panel-item {
+        padding:0;
+      }
+
+    </style>    
+  </head>
+  <body>    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <section class="panel panel-box">
+            <div class="panel-left panel-item bg-info">
+                <i class="fa fa-comments-o" style="font-size:63px;"></i>
+            </div>
+            <div class="panel-right panel-item bg-reverse">
+                <!-- <p class="size-h1">Chater</p>
+                <p class="text-muted">Box</p> -->
+            </div>
+          </section>
+        </div>
+        <div class="col-md-8">
+          <section class="panel panel-box">
+            <div class="panel-left panel-item bg-default">
+                <p class="size-h1">Chater<strong>Box</strong></p>
+            </div>
+            <div class="panel-right panel-item bg-reverse">
+                <!-- <i class="fa fa-comments-o text-huge"></i>
+                <p class="text-muted">Box</p> -->
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">          
+          <ul id="roomsList" class="list-group">
+            <div class="list-group-item">
+              <div class="input-group">
+                <input class="form-control" id="roomInput" placeholder="New Room">
+                <span class="input-group-btn">
+                  <button class="btn btn-info" id="addRoom">New Room</button>
+                </span>
+              </div>
+            </div>
+          </ul>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div id="userInput" class="input-group">
+                <input type="text" class="form-control" id="addUserInput" placeholder="User">
+                <span class="input-group-btn">
+                    <button id="addUserBtn" class="btn btn-info"><i class="fa fa-plus"></i> User</button>                  
+                </span>
+              </div>
+              <strong id="userTitle"></strong>
+            </div>
+            <div id="usersList" class="list-group-item">
+              
+            </div>
+          </div>
+        </div>
+        <div id="roomMessages" class="col-md-8">
+          
+        </div>
+      </div>
+    </div>
+    
+    <!-- jQuery -->
+    <script type='text/javascript' src='bower_components/firebase/firebase.js'></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/room.js"></script>
+    <script type="text/javascript" src="js/message.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+
+  </body>
+</html>
