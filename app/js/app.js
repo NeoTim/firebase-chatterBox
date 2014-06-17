@@ -1,3 +1,11 @@
+var fireroot = "http://my-data-test.firebaseio.com";
+var UsersRef = new Firebase(fireroot + "/messages");
+
+var $roomMessages   = $("#roomMessages");
+var $room           = $("#room");
+var $addMsgBtn      = $("#addMsgBtn");
+var $addMsgInput    = $("#addMsgInput");
+
 var app = {
   init: function( FB ){
     app.FB = FB
@@ -40,13 +48,6 @@ var app = {
 };
 
 $(document).ready(function(){
-  var fireroot = "http://my-data-test.firebaseio.com";
-  var UsersRef = new Firebase(fireroot + "/messages");
-  
-  var $roomMessages   = $("#roomMessages");
-  var $room           = $("#room");
-  var $addMsgBtn      = $("#addMsgBtn");
-  var $addMsgInput    = $("#addMsgInput");
 
   app.init(UsersRef);
 
