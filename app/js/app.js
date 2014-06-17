@@ -24,10 +24,10 @@ var app = {
       if($addMsgInput.val()){
         app.create( $addMsgInput.val() )
       }
+      $addMsgInput.val("");
     });
   },
   create: function( data ){
-
     app.FB.push({text: data});
   },
   update: function( data, id){
